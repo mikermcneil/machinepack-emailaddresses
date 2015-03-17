@@ -1,0 +1,10 @@
+{
+  "machine": "validate-email-address",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

@@ -23,6 +23,11 @@
     "machineDir": "machines/",
     "machines": [
       "validate-email-address"
-    ]
+    ],
+    "testsUrl": "https://travis-ci.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
   }
 }
