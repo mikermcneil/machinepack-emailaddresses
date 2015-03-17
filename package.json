@@ -10,9 +10,9 @@
     "machines",
     "machinepack"
   ],
-  "author": "",
+  "author": "Mike McNeil",
   "license": "MIT",
-  "dependencies":{
+  "dependencies": {
     "machine": "^3.0.0"
   },
   "devDependencies": {
@@ -21,6 +21,8 @@
   "machinepack": {
     "friendlyName": "Email addresses",
     "machineDir": "machines/",
-    "machines": []
+    "machines": [
+      "validate-email-address"
+    ]
   }
 }
