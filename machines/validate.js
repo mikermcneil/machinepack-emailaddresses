@@ -12,6 +12,12 @@ module.exports = {
 
   inputs: {
 
+    string: {
+      friendlyName: 'Email address (maybe)',
+      example: 'foo@foobar.com',
+      description: 'The email address to validate.',
+      required: true
+    }
 
   },
 
@@ -26,14 +32,26 @@ module.exports = {
     },
 
     success: {
-      description: 'Done.',
+      friendlyName: 'valid email address',
+      description: 'The provided string is a valid email address.'
     },
+
+    invalid: {
+      friendlyName: 'not email address',
+      description: 'The provided string is not an email address.'
+    }
 
   },
 
 
   fn: function (inputs,exits) {
-    return exits.success();
+    var Validator = require('validator');
+
+    if (Validator.isEmail(inputs.string)) {
+      return exits.success();
+    }
+    return exits.invalid();
+
   },
 
 
