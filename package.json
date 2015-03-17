@@ -22,7 +22,7 @@
     "friendlyName": "Email addresses",
     "machineDir": "machines/",
     "machines": [
-      "validate-email-address"
+      "validate"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
