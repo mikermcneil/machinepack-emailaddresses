@@ -7,9 +7,6 @@ module.exports = {
   description: 'Determine whether or not the provided string is an email address.',
 
 
-  extendedDescription: '',
-
-
   inputs: {
 
     string: {
@@ -20,9 +17,6 @@ module.exports = {
     }
 
   },
-
-
-  defaultExit: 'success',
 
 
   exits: {
