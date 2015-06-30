@@ -2,8 +2,15 @@
   "machine": "validate",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
+      "using": {
+        "string": "this is an email address right?"
+      },
+      "outcome": "invalid"
+    },
+    {
+      "using": {
+        "string": "ugh@ok-what-about-this.biz"
+      },
       "outcome": "success"
     }
   ]
