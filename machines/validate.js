@@ -10,9 +10,8 @@ module.exports = {
   inputs: {
 
     string: {
-      friendlyName: 'Email address (maybe)',
       example: 'foo@foobar.com',
-      description: 'The email address to validate.',
+      description: 'The candidate email address to validate.',
       required: true
     }
 
@@ -21,18 +20,14 @@ module.exports = {
 
   exits: {
 
-    error: {
-      description: 'Unexpected error occurred.',
-    },
-
     success: {
-      friendlyName: 'valid email address',
-      description: 'The provided string is a valid email address.'
+      friendlyName: 'Valid email address',
+      description: 'The provided string was a valid email address.'
     },
 
     invalid: {
-      friendlyName: 'not email address',
-      description: 'The provided string is not an email address.'
+      friendlyName: 'Invalid email address',
+      description: 'The provided string was not a valid email address.'
     }
 
   },
