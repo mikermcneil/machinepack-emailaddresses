@@ -34,11 +34,17 @@ module.exports = {
 
 
   fn: function (inputs,exits) {
+
+    // Import `validator`.
     var Validator = require('validator');
 
+    // If the input string validates as an email, return through
+    // the `success` exit.
     if (Validator.isEmail(inputs.string)) {
       return exits.success();
     }
+
+    // Otherwise return through the `invalid` exit.
     return exits.invalid();
 
   },
