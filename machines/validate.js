@@ -1,10 +1,16 @@
 module.exports = {
 
 
-  friendlyName: 'Validate email address',
+  friendlyName: 'Is valid email address?',
 
 
   description: 'Determine whether or not the provided string is an email address.',
+
+
+  sideEffects: 'cacheable',
+
+
+  sync: true,
 
 
   inputs: {
@@ -21,13 +27,9 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'Valid email address',
-      description: 'The provided string was a valid email address.'
-    },
-
-    invalid: {
-      friendlyName: 'Invalid email address',
-      description: 'The provided string was not a valid email address.'
+      outputFriendlyName: 'Is valid email address?',
+      outputDescription: 'Whether the provided string was a valid email address.',
+      outputExample: true
     }
 
   },
@@ -38,14 +40,14 @@ module.exports = {
     // Import `validator`.
     var Validator = require('validator');
 
-    // If the input string validates as an email, return through
-    // the `success` exit.
+    // If the input string validates as an email, return `true`
+    // through the `success` exit.
     if (Validator.isEmail(inputs.string)) {
-      return exits.success();
+      return exits.success(true);
     }
 
-    // Otherwise return through the `invalid` exit.
-    return exits.invalid();
+    // Otherwise return `false` through the `success` exit.
+    return exits.success(false);
 
   },
 

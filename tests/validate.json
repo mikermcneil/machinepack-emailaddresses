@@ -5,13 +5,15 @@
       "using": {
         "string": "this is an email address right?"
       },
-      "outcome": "invalid"
+      "outcome": "success",
+      "returns": false
     },
     {
       "using": {
         "string": "ugh@ok-what-about-this.biz"
       },
-      "outcome": "success"
+      "outcome": "success",
+      "returns": true
     }
   ]
 }
