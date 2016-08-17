@@ -1,5 +1,5 @@
 {
-  "machine": "validate",
+  "machine": "is-email-address",
   "expectations": [
     {
       "using": {

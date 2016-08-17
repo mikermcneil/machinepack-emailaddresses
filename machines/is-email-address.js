@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Is valid email address?',
+  friendlyName: 'Is email address?',
 
 
-  description: 'Determine whether or not the provided string is an email address.',
+  description: 'Determine whether or not the provided string is a valid email address.',
 
 
   sideEffects: 'cacheable',
